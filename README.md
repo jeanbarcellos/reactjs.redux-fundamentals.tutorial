@@ -1,70 +1,24 @@
-# Redux Fundamentals Tutorial Example
+Repositório somente para estudos!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tutorial: Fundamentals
 
-## Available Scripts
 
-In the project directory, you can run:
+Links:
+* https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
 
-### `yarn start`
+### Iniciando o aplicativo de exemplo Todo
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Definição de requisitos**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Vamos começar descobrindo os requisitos de negócios iniciais para este aplicativo:
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- A IU deve consistir em três seções principais:
+    - Uma caixa de entrada para permitir que o usuário digite o texto de um novo item de tarefa
+    - Uma lista de todos os itens de tarefas existentes
+    - Uma seção de rodapé que mostra o número de tarefas não concluídas e mostra opções de filtragem
+- Os itens da lista de tarefas devem ter uma caixa de seleção que alterna seu status de "concluído". Devemos também ser capazes de adicionar uma tag de categoria codificada por cores para uma lista predefinida de cores e excluir itens de tarefas.
+- O contador deve pluralizar o número de todos ativos: "0 itens", "1 item", "3 itens", etc.
+- Deve haver botões para marcar todas as tarefas como concluídas e para limpar todas as tarefas concluídas removendo-as
+- Deve haver duas maneiras de filtrar as pendências exibidas na lista:
+    - Filtragem baseada na exibição de "Todos", "Ativos" e "Concluídos" todos
+    - Filtrar com base na seleção de uma ou mais cores e mostrar todos os cujas marcas correspondem a essas cores
