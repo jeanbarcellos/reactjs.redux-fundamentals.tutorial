@@ -81,10 +81,8 @@ export default function todosReducer(state = initialState, action) {
       }
     }
     case 'todos/todosLoading': {
-      return {
-        ...state,
-        status: 'loading'
-      }
+      state.status = 'loading'
+      return state
     }
     case 'todos/todosLoaded': {
       const newEntities = {}
