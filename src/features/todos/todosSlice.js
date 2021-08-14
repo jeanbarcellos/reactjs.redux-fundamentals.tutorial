@@ -2,11 +2,6 @@ import { client } from '../../api/client'
 
 const initialState = []
 
-function nextTodoId(todos) {
-  const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1)
-  return maxId + 1
-}
-
 export default function todosReducer(state = initialState, action) {
   switch (action.type) {
     case 'todos/todosLoaded': {
@@ -16,14 +11,8 @@ export default function todosReducer(state = initialState, action) {
 
     case 'todos/todoAdded': {
       // Can return just the new todos array - no extra object around it
-      return [
-        ...state,
-        {
-          id: nextTodoId(state),
-          text: action.payload,
-          completed: false,
-        },
-      ]
+      // Return a new todos state array with the new todo item at the end
+      return [...state, action.payload]
     }
     case 'todos/todoToggled': {
       return state.map((todo) => {
@@ -76,4 +65,15 @@ export async function fetchTodos(dispatch, getState) {
 
   const stateAfter = getState()
   console.log('Todos after dispatch: ', stateAfter.todos.length)
+}
+
+// Escreva uma função externa síncrona que receba o parâmetro `text`:
+export function saveNewTodo(text) {
+  // E então cria e retorna a função thunk assíncrona:
+  return async function saveNewTodoThunk(dispatch, getState) {
+    // ✅ Agora podemos usar o valor do texto e enviá-lo para o servidor
+    const initialTodo = { text }
+    const response = await client.post('/fakeApi/todos', { todo: initialTodo })
+    dispatch({ type: 'todos/todoAdded', payload: response.todo })
+  }
 }
