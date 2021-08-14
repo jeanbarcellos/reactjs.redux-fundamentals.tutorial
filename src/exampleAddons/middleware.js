@@ -21,7 +21,7 @@ export const loggerMiddleware = (storeAPI) => (next) => (action) => {
 }
 
 export const alwaysReturnHelloMiddleware = (storeAPI) => (next) => (action) => {
-  const originalResult = next(action)
+  // const originalResult = next(action)
   // Ignore the original result, return something else
   return 'Hello!'
 }
@@ -33,5 +33,16 @@ export const delayedMessageMiddleware = (storeAPI) => (next) => (action) => {
     }, 1000)
   }
 
+  return next(action)
+}
+
+export const asyncFunctionMiddleware = storeAPI => next => action => {
+  // Se a "ação" for na verdade uma função ao invés...
+  if (typeof action === 'function') {
+    // em seguida, chame a função e passe `dispatch` e` getState` como argumentos
+    return action(storeAPI.dispatch, storeAPI.getState)
+  }
+
+  // Caso contrário, é uma ação normal - envie para a frente
   return next(action)
 }
