@@ -6,6 +6,7 @@ Links:
 
 - https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
 - https://redux.js.org/tutorials/fundamentals/part-4-store
+- https://redux.js.org/tutorials/fundamentals/part-5-ui-react
 
 ### Iniciando o aplicativo de exemplo Todo
 
