@@ -80,7 +80,8 @@ const Footer = () => {
 
   const onColorChange = (color, changeType) => dispatch(colorFilterChanged(color, changeType))
 
-  const onStatusChange = status => dispatch({ type: 'filters/statusFilterChanged', payload: status })
+  const onStatusChange = status =>
+    dispatch({ type: 'filters/statusFilterChanged', payload: status })
 
   return (
     <footer className='footer'>
