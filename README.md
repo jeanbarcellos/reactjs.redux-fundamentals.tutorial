@@ -1,9 +1,11 @@
 Repositório somente para estudos!
 
-## Tutorial: Fundamentals
+# Tutorial: Redux Fundamentals
 
 Links:
 
+- https://redux.js.org/tutorials/fundamentals/part-1-overview
+- https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 - https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers
 - https://redux.js.org/tutorials/fundamentals/part-4-store
 - https://redux.js.org/tutorials/fundamentals/part-5-ui-react
@@ -11,7 +13,7 @@ Links:
 - https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns
 - https://redux.js.org/tutorials/fundamentals/part-8-modern-redux
 
-### Iniciando o aplicativo de exemplo Todo
+<br><br><hr>
 
 **Definição de requisitos**
 
