@@ -26,3 +26,9 @@ Vamos começar descobrindo os requisitos de negócios iniciais para este aplicat
 - Deve haver duas maneiras de filtrar as pendências exibidas na lista:
   - Filtragem baseada na exibição de "Todos", "Ativos" e "Concluídos" todos
   - Filtrar com base na seleção de uma ou mais cores e mostrar todos os cujas marcas correspondem a essas cores
+
+## Outros
+
+Flux Standard Actions
+
+- https://github.com/redux-utilities/flux-standard-action#motivation
