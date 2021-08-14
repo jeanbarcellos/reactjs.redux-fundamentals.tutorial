@@ -9,6 +9,7 @@ Links:
 - https://redux.js.org/tutorials/fundamentals/part-5-ui-react
 - https://redux.js.org/tutorials/fundamentals/part-6-async-logic
 - https://redux.js.org/tutorials/fundamentals/part-7-standard-patterns
+- https://redux.js.org/tutorials/fundamentals/part-8-modern-redux
 
 ### Iniciando o aplicativo de exemplo Todo
 
